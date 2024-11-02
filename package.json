@@ -1,0 +1,21 @@
+{
+  "name": "pgn2025-atp-proxy",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@atproto/api": "^0.13.14",
+    "@hono/node-server": "^1.13.4",
+    "dotenv": "^16.4.5",
+    "hono": "^4.6.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "tsx": "^4.7.1",
+    "typescript": "^5.6.3"
+  }
+}
