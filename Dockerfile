@@ -5,7 +5,7 @@ FROM base AS builder
 RUN apk add --no-cache gcompat
 WORKDIR /app
 
-COPY package*json tsconfig.json src ./
+COPY package*json pnpm-*.yaml tsconfig.json src ./
 RUN corepack enable
 RUN pnpm install --frozen-lockfile
 RUN pnpm run build
