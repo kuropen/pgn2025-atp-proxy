@@ -6,8 +6,9 @@ RUN apk add --no-cache gcompat
 WORKDIR /app
 
 COPY package*json tsconfig.json src ./
-RUN npm install
-RUN npm run build
+RUN corepack enable
+RUN pnpm install --frozen-lockfile
+RUN pnpm run build
 
 FROM base AS runner
 WORKDIR /app
